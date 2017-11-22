@@ -3,6 +3,7 @@ Documentation  This is some basic info about the whole suite
 # notice we're no longer referencing the Selenium2Library in our script!
 Resource  ../Resources/Common.robot  # necessary for Setup & Teardown
 Resource  ../Resources/Amazon.robot  # necessary for lower level keywords in test cases
+#
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 #
