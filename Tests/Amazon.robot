@@ -33,3 +33,6 @@ Logged out user can add product to cart
   #  Amazon.Select Product from Search Results
    # Amazon.Add Product to Cart
    # Amazon.Begin Checkout
+
+Feature 2 Test
+  log  Doing Feature 2

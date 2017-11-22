@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="90be04ea-6e54-43ff-bb4f-9ca693e47413" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/Amazon.robot" afterPath="$PROJECT_DIR$/Tests/Amazon.robot" />
     </list>
     <ignored path="amazon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,9 +25,11 @@
       <file leaf-file-name="Amazon.robot" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/Amazon.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="359">
+              <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#364#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -301,13 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1511323574313</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test">
+      <created>1511366261566</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511366261566</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32201087" sideWeight="0.5026178" order="7" side_tool="true" content_ui="tabs" x="0" y="307" width="1594" height="237" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -403,11 +414,11 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Tests" />
     </ignored-roots>
-    <MESSAGE value="test" />
     <MESSAGE value="test 2" />
     <MESSAGE value="test 33" />
     <MESSAGE value="test 4 updated testcase file" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 4 updated testcase file" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -785,9 +796,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Amazon.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="359">
+          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#364#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
