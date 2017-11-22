@@ -7,7 +7,7 @@ Resource  ../Resources/Amazon.robot  # necessary for lower level keywords in tes
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 #
-#
+###
 
 # Copy/paste the below line to Terminal window to execute
 # pybot -d results tests/amazon.robot
