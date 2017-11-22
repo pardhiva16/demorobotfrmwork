@@ -34,5 +34,8 @@ Logged out user can add product to cart
    # Amazon.Add Product to Cart
    # Amazon.Begin Checkout
 
+Feature 1 Test
+  log  Doing Feature 1
+
 Feature 2 Test
   log  Doing Feature 2
