@@ -2,7 +2,7 @@
 Library  Selenium2Library
 
 *** Variables ***
-
+${BROWSER} = Firefox
 *** Keywords ***
 Begin Web Test
     #Open Browser  about:blank  chrome

@@ -2,7 +2,7 @@
 Library  Selenium2Library
 
 *** Variables ***
-
+${APPURL} = https://www.amazon.com
 
 *** Keywords ***
 Load

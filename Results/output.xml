@@ -1,432 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20171122 16:32:38.700" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
-<suite source="C:\development\robot-scripts\demorobotfrmwork\tests\amazon.robot" id="s1" name="Amazon">
-<test id="s1-t1" name="Logged out user can search for products">
+<robot generated="20171123 10:38:34.730" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="C:\development\robot-scripts\demorobotfrmwork\tests" id="s1" name="Tests">
+<suite source="C:\development\robot-scripts\demorobotfrmwork\tests\Amazon.robot" id="s1-s1" name="Amazon">
+<test id="s1-s1-t1" name="Logged out user can search for products">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>firefox</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20171122 16:32:39.240" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20171122 16:32:44.574" starttime="20171122 16:32:39.240"></status>
+<msg timestamp="20171123 10:38:34.917" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171123 10:38:38.641" starttime="20171123 10:38:34.917"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20171122 16:32:48.084" starttime="20171122 16:32:44.574"></status>
+<status status="PASS" endtime="20171123 10:38:39.767" starttime="20171123 10:38:38.641"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:32:48.084" starttime="20171122 16:32:39.240"></status>
+<status status="PASS" endtime="20171123 10:38:39.767" starttime="20171123 10:38:34.917"></status>
 </kw>
 <kw name="Search for Products" library="Amazon">
 <kw name="Load" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
-<arg>http://www.amazon.com</arg>
+<arg>${APPURL}</arg>
 </arguments>
-<msg timestamp="20171122 16:32:48.084" level="INFO">Opening url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20171122 16:32:55.312" starttime="20171122 16:32:48.084"></status>
+<msg timestamp="20171123 10:38:39.770" level="FAIL">Variable '${APPURL}' not found.</msg>
+<status status="FAIL" endtime="20171123 10:38:39.770" starttime="20171123 10:38:39.769"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:32:55.312" starttime="20171122 16:32:48.084"></status>
+<status status="FAIL" endtime="20171123 10:38:39.770" starttime="20171123 10:38:39.769"></status>
 </kw>
-<kw name="Verify Page Loaded" library="LandingPage">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Your Amazon.com</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:32:55.402" starttime="20171122 16:32:55.313"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:32:55.403" starttime="20171122 16:32:55.313"></status>
-</kw>
-<kw name="Search for Products" library="TopNav">
-<kw name="Enter Search Term" library="TopNav">
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=twotabsearchtextbox</arg>
-<arg>Ferrari 458</arg>
-</arguments>
-<msg timestamp="20171122 16:32:55.404" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
-<status status="PASS" endtime="20171122 16:32:55.520" starttime="20171122 16:32:55.403"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:32:55.521" starttime="20171122 16:32:55.403"></status>
-</kw>
-<kw name="Submit Search" library="TopNav">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
-</arguments>
-<msg timestamp="20171122 16:32:55.521" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
-<status status="PASS" endtime="20171122 16:32:58.012" starttime="20171122 16:32:55.521"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:32:58.012" starttime="20171122 16:32:55.521"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:32:58.012" starttime="20171122 16:32:55.403"></status>
-</kw>
-<kw name="Verify Search Completed" library="SearchResults">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>results for "Ferrari 458"</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:32:58.052" starttime="20171122 16:32:58.013"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:32:58.052" starttime="20171122 16:32:58.013"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:32:58.052" starttime="20171122 16:32:48.084"></status>
+<status status="FAIL" endtime="20171123 10:38:39.771" starttime="20171123 10:38:39.768"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20171122 16:32:58.725" starttime="20171122 16:32:58.053"></status>
+<status status="PASS" endtime="20171123 10:38:42.838" starttime="20171123 10:38:39.772"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:32:58.725" starttime="20171122 16:32:58.053"></status>
+<status status="PASS" endtime="20171123 10:38:42.838" starttime="20171123 10:38:39.771"></status>
 </kw>
 <tags>
 <tag>Smoke Search</tag>
 </tags>
-<status status="PASS" endtime="20171122 16:32:58.725" critical="yes" starttime="20171122 16:32:39.240"></status>
+<status status="FAIL" endtime="20171123 10:38:42.838" critical="yes" starttime="20171123 10:38:34.917">Variable '${APPURL}' not found.</status>
 </test>
-<test id="s1-t2" name="Logged out user can view a product">
+<test id="s1-s1-t2" name="Logged out user can view a product">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>firefox</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20171122 16:32:58.725" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20171122 16:33:02.909" starttime="20171122 16:32:58.725"></status>
+<msg timestamp="20171123 10:38:42.838" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171123 10:38:46.268" starttime="20171123 10:38:42.838"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20171122 16:33:06.429" starttime="20171122 16:33:02.909"></status>
+<status status="PASS" endtime="20171123 10:38:47.399" starttime="20171123 10:38:46.268"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:06.429" starttime="20171122 16:32:58.725"></status>
+<status status="PASS" endtime="20171123 10:38:47.399" starttime="20171123 10:38:42.838"></status>
 </kw>
 <kw name="Search for Products" library="Amazon">
 <kw name="Load" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
-<arg>http://www.amazon.com</arg>
+<arg>${APPURL}</arg>
 </arguments>
-<msg timestamp="20171122 16:33:06.429" level="INFO">Opening url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20171122 16:33:11.115" starttime="20171122 16:33:06.429"></status>
+<msg timestamp="20171123 10:38:47.402" level="FAIL">Variable '${APPURL}' not found.</msg>
+<status status="FAIL" endtime="20171123 10:38:47.402" starttime="20171123 10:38:47.401"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:11.115" starttime="20171122 16:33:06.429"></status>
+<status status="FAIL" endtime="20171123 10:38:47.402" starttime="20171123 10:38:47.400"></status>
 </kw>
-<kw name="Verify Page Loaded" library="LandingPage">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Your Amazon.com</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:11.218" starttime="20171122 16:33:11.116"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:11.218" starttime="20171122 16:33:11.116"></status>
-</kw>
-<kw name="Search for Products" library="TopNav">
-<kw name="Enter Search Term" library="TopNav">
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=twotabsearchtextbox</arg>
-<arg>Ferrari 458</arg>
-</arguments>
-<msg timestamp="20171122 16:33:11.220" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
-<status status="PASS" endtime="20171122 16:33:11.318" starttime="20171122 16:33:11.219"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:11.318" starttime="20171122 16:33:11.219"></status>
-</kw>
-<kw name="Submit Search" library="TopNav">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
-</arguments>
-<msg timestamp="20171122 16:33:11.319" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
-<status status="PASS" endtime="20171122 16:33:19.370" starttime="20171122 16:33:11.319"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:19.371" starttime="20171122 16:33:11.318"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:19.371" starttime="20171122 16:33:11.219"></status>
-</kw>
-<kw name="Verify Search Completed" library="SearchResults">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>results for "Ferrari 458"</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:19.416" starttime="20171122 16:33:19.371"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:19.417" starttime="20171122 16:33:19.371"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:19.417" starttime="20171122 16:33:06.429"></status>
-</kw>
-<kw name="Select Product from Search Results" library="Amazon">
-<kw name="Click Product Link" library="SearchResults">
-<doc>Clicks on the first product in the search results list</doc>
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by locator.</doc>
-<arguments>
-<arg>css=#result_0 a.s-access-detail-page</arg>
-</arguments>
-<msg timestamp="20171122 16:33:19.419" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
-<status status="PASS" endtime="20171122 16:33:23.476" starttime="20171122 16:33:19.419"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:23.476" starttime="20171122 16:33:19.418"></status>
-</kw>
-<kw name="Verify Page Loaded" library="Product">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Back to search results</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:23.543" starttime="20171122 16:33:23.477"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:23.543" starttime="20171122 16:33:23.477"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:23.543" starttime="20171122 16:33:19.418"></status>
+<status status="FAIL" endtime="20171123 10:38:47.402" starttime="20171123 10:38:47.400"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20171122 16:33:24.359" starttime="20171122 16:33:23.544"></status>
+<status status="PASS" endtime="20171123 10:38:50.491" starttime="20171123 10:38:47.404"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:24.359" starttime="20171122 16:33:23.544"></status>
+<status status="PASS" endtime="20171123 10:38:50.491" starttime="20171123 10:38:47.403"></status>
 </kw>
 <tags>
 <tag>Smoke View</tag>
 </tags>
-<status status="PASS" endtime="20171122 16:33:24.359" critical="yes" starttime="20171122 16:32:58.725"></status>
+<status status="FAIL" endtime="20171123 10:38:50.491" critical="yes" starttime="20171123 10:38:42.838">Variable '${APPURL}' not found.</status>
 </test>
-<test id="s1-t3" name="Logged out user can add product to cart">
+<test id="s1-s1-t3" name="Logged out user can add product to cart">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>firefox</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20171122 16:33:24.359" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20171122 16:33:28.533" starttime="20171122 16:33:24.359"></status>
+<msg timestamp="20171123 10:38:50.491" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171123 10:38:53.950" starttime="20171123 10:38:50.491"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20171122 16:33:32.043" starttime="20171122 16:33:28.533"></status>
+<status status="PASS" endtime="20171123 10:38:55.069" starttime="20171123 10:38:53.950"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:32.043" starttime="20171122 16:33:24.359"></status>
+<status status="PASS" endtime="20171123 10:38:55.069" starttime="20171123 10:38:50.491"></status>
 </kw>
 <kw name="Search for Products" library="Amazon">
 <kw name="Load" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
-<arg>http://www.amazon.com</arg>
+<arg>${APPURL}</arg>
 </arguments>
-<msg timestamp="20171122 16:33:32.043" level="INFO">Opening url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20171122 16:33:37.199" starttime="20171122 16:33:32.043"></status>
+<msg timestamp="20171123 10:38:55.072" level="FAIL">Variable '${APPURL}' not found.</msg>
+<status status="FAIL" endtime="20171123 10:38:55.072" starttime="20171123 10:38:55.071"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:37.200" starttime="20171122 16:33:32.043"></status>
+<status status="FAIL" endtime="20171123 10:38:55.072" starttime="20171123 10:38:55.070"></status>
 </kw>
-<kw name="Verify Page Loaded" library="LandingPage">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Your Amazon.com</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:37.248" starttime="20171122 16:33:37.200"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:37.248" starttime="20171122 16:33:37.200"></status>
-</kw>
-<kw name="Search for Products" library="TopNav">
-<kw name="Enter Search Term" library="TopNav">
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=twotabsearchtextbox</arg>
-<arg>Ferrari 458</arg>
-</arguments>
-<msg timestamp="20171122 16:33:37.249" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
-<status status="PASS" endtime="20171122 16:33:37.483" starttime="20171122 16:33:37.249"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:37.483" starttime="20171122 16:33:37.248"></status>
-</kw>
-<kw name="Submit Search" library="TopNav">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
-</arguments>
-<msg timestamp="20171122 16:33:37.484" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
-<status status="PASS" endtime="20171122 16:33:40.217" starttime="20171122 16:33:37.484"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:40.217" starttime="20171122 16:33:37.484"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:40.217" starttime="20171122 16:33:37.248"></status>
-</kw>
-<kw name="Verify Search Completed" library="SearchResults">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>results for "Ferrari 458"</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:40.246" starttime="20171122 16:33:40.218"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:40.247" starttime="20171122 16:33:40.218"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:40.247" starttime="20171122 16:33:32.043"></status>
-</kw>
-<kw name="Select Product from Search Results" library="Amazon">
-<kw name="Click Product Link" library="SearchResults">
-<doc>Clicks on the first product in the search results list</doc>
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by locator.</doc>
-<arguments>
-<arg>css=#result_0 a.s-access-detail-page</arg>
-</arguments>
-<msg timestamp="20171122 16:33:40.250" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
-<status status="PASS" endtime="20171122 16:33:43.691" starttime="20171122 16:33:40.249"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:43.691" starttime="20171122 16:33:40.249"></status>
-</kw>
-<kw name="Verify Page Loaded" library="Product">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Back to search results</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:43.733" starttime="20171122 16:33:43.692"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:43.733" starttime="20171122 16:33:43.691"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:43.733" starttime="20171122 16:33:40.248"></status>
-</kw>
-<kw name="Add Product to Cart" library="Amazon">
-<kw name="Add to Cart" library="Product">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>id=add-to-cart-button</arg>
-</arguments>
-<msg timestamp="20171122 16:33:43.735" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
-<status status="PASS" endtime="20171122 16:33:45.095" starttime="20171122 16:33:43.735"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:45.095" starttime="20171122 16:33:43.735"></status>
-</kw>
-<kw name="Verify Product Added" library="Cart">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>Added to Cart</arg>
-</arguments>
-<status status="PASS" endtime="20171122 16:33:45.186" starttime="20171122 16:33:45.096"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:45.186" starttime="20171122 16:33:45.095"></status>
-</kw>
-<status status="PASS" endtime="20171122 16:33:45.186" starttime="20171122 16:33:43.734"></status>
+<status status="FAIL" endtime="20171123 10:38:55.072" starttime="20171123 10:38:55.070"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20171122 16:33:45.595" starttime="20171122 16:33:45.187"></status>
+<status status="PASS" endtime="20171123 10:38:58.171" starttime="20171123 10:38:55.073"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:45.595" starttime="20171122 16:33:45.187"></status>
+<status status="PASS" endtime="20171123 10:38:58.171" starttime="20171123 10:38:55.073"></status>
 </kw>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" endtime="20171122 16:33:45.595" critical="yes" starttime="20171122 16:33:24.359"></status>
+<status status="FAIL" endtime="20171123 10:38:58.171" critical="yes" starttime="20171123 10:38:50.491">Variable '${APPURL}' not found.</status>
 </test>
-<test id="s1-t4" name="Feature 1 Test">
+<test id="s1-s1-t4" name="Feature 1 Test">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>firefox</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20171122 16:33:45.595" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20171122 16:33:49.749" starttime="20171122 16:33:45.595"></status>
+<msg timestamp="20171123 10:38:58.171" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171123 10:39:01.613" starttime="20171123 10:38:58.171"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20171122 16:33:53.259" starttime="20171122 16:33:49.749"></status>
+<status status="PASS" endtime="20171123 10:39:02.744" starttime="20171123 10:39:01.615"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:53.259" starttime="20171122 16:33:45.595"></status>
+<status status="PASS" endtime="20171123 10:39:02.744" starttime="20171123 10:38:58.171"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Doing Feature 1</arg>
 </arguments>
-<msg timestamp="20171122 16:33:53.259" level="INFO">Doing Feature 1</msg>
-<status status="PASS" endtime="20171122 16:33:53.259" starttime="20171122 16:33:53.259"></status>
+<msg timestamp="20171123 10:39:02.746" level="INFO">Doing Feature 1</msg>
+<status status="PASS" endtime="20171123 10:39:02.746" starttime="20171123 10:39:02.745"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20171122 16:33:53.379" starttime="20171122 16:33:53.259"></status>
+<status status="PASS" endtime="20171123 10:39:05.809" starttime="20171123 10:39:02.747"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:53.379" starttime="20171122 16:33:53.259"></status>
+<status status="PASS" endtime="20171123 10:39:05.809" starttime="20171123 10:39:02.746"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:33:53.379" critical="yes" starttime="20171122 16:33:45.595"></status>
+<status status="PASS" endtime="20171123 10:39:05.809" critical="yes" starttime="20171123 10:38:58.171"></status>
 </test>
-<test id="s1-t5" name="Feature 2 Test">
+<test id="s1-s1-t5" name="Feature 2 Test">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>firefox</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20171122 16:33:53.389" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20171122 16:33:57.533" starttime="20171122 16:33:53.389"></status>
+<msg timestamp="20171123 10:39:05.809" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171123 10:39:09.265" starttime="20171123 10:39:05.809"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20171122 16:34:01.043" starttime="20171122 16:33:57.533"></status>
+<status status="PASS" endtime="20171123 10:39:10.379" starttime="20171123 10:39:09.265"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:34:01.043" starttime="20171122 16:33:53.379"></status>
+<status status="PASS" endtime="20171123 10:39:10.379" starttime="20171123 10:39:05.809"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Doing Feature 2</arg>
 </arguments>
-<msg timestamp="20171122 16:34:01.043" level="INFO">Doing Feature 2</msg>
-<status status="PASS" endtime="20171122 16:34:01.043" starttime="20171122 16:34:01.043"></status>
+<msg timestamp="20171123 10:39:10.380" level="INFO">Doing Feature 2</msg>
+<status status="PASS" endtime="20171123 10:39:10.380" starttime="20171123 10:39:10.380"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20171122 16:34:01.183" starttime="20171122 16:34:01.043"></status>
+<status status="PASS" endtime="20171123 10:39:13.461" starttime="20171123 10:39:10.381"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:34:01.183" starttime="20171122 16:34:01.043"></status>
+<status status="PASS" endtime="20171123 10:39:13.461" starttime="20171123 10:39:10.381"></status>
 </kw>
-<status status="PASS" endtime="20171122 16:34:01.183" critical="yes" starttime="20171122 16:33:53.379"></status>
+<status status="PASS" endtime="20171123 10:39:13.461" critical="yes" starttime="20171123 10:39:05.809"></status>
 </test>
 <doc>This is some basic info about the whole suite</doc>
-<status status="PASS" endtime="20171122 16:34:01.183" starttime="20171122 16:32:38.710"></status>
+<status status="FAIL" endtime="20171123 10:39:13.461" starttime="20171123 10:38:34.761"></status>
+</suite>
+<status status="FAIL" endtime="20171123 10:39:13.461" starttime="20171123 10:38:34.730"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="5">Critical Tests</stat>
-<stat fail="0" pass="5">All Tests</stat>
+<stat fail="3" pass="2">Critical Tests</stat>
+<stat fail="3" pass="2">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">Smoke</stat>
-<stat fail="0" pass="1">Smoke Search</stat>
-<stat fail="0" pass="1">Smoke View</stat>
+<stat fail="1" pass="0">Smoke</stat>
+<stat fail="1" pass="0">Smoke Search</stat>
+<stat fail="1" pass="0">Smoke View</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Amazon" pass="5">Amazon</stat>
+<stat fail="3" id="s1" name="Tests" pass="2">Tests</stat>
+<stat fail="3" id="s1-s1" name="Amazon" pass="2">Tests.Amazon</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20171123 10:38:34.761" level="ERROR">Error in file 'C:\development\robot-scripts\demorobotfrmwork\tests\Amazon.robot': Setting variable '${BROWSER} = chrome' failed: Invalid variable name '${BROWSER} = chrome'.</msg>
+<msg timestamp="20171123 10:38:34.761" level="ERROR">Error in file 'C:\development\robot-scripts\demorobotfrmwork\tests\Amazon.robot': Setting variable '${APPURL} = https://www.amazon.com' failed: Invalid variable name '${APPURL} = https://www.amazon.com'.</msg>
 </errors>
 </robot>
