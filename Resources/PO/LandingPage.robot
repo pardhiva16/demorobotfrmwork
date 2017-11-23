@@ -6,7 +6,7 @@ Library  Selenium2Library
 
 *** Keywords ***
 Load
-    Go To  http://www.amazon.com
+    Go To  ${APPURL}
 
 Verify Page Loaded
     Wait Until Page Contains  Your Amazon.com

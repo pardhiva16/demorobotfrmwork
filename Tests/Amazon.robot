@@ -7,6 +7,14 @@ Resource  ../Resources/Amazon.robot  # necessary for lower level keywords in tes
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
+*** Variables ***
+${BROWSER} = chrome
+${APPURL} = https://www.amazon.com
+
+# command to put variables in run time
+# pybot -d results -v BROWSER:firefox -v App URL:"https://www.google.com" i current tests
+# pybot -d results -v  BROWSER:Firefox   i  current tests
+# pybot -d results -v  BROWSER:Firefox test
 
 # Copy/paste the below line to Terminal window to execute
 # pybot -d results tests/amazon.robot
