@@ -1,12 +1,12 @@
 *** Settings ***
 Library  Selenium2Library
-Resource  ../Resources/Tests/Amazon.robot
-*** Variables ***
-${APPURL} = https://www.amazon.com
+#Resource  C:/development/robot-scripts/demorobotfrmwork/Tests/Amazon.robot
+
+
 
 *** Keywords ***
 Load
-    Go To   ${APPURL}
+     Go To    https://www.amazon.com
 
 Verify Page Loaded
     Wait Until Page Contains  Your Amazon.com

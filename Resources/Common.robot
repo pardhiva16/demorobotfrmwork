@@ -1,13 +1,16 @@
 *** Settings ***
-Library  Selenium2Library
-Resource  ../Resources/Tests/Amazon.robot
+#Library  SeleniumLibrary
+Library   Selenium2Library
+#Resource  C:/development/robot-scripts/demorobotfrmwork/Tests/Amazon.robot
+
 *** Variables ***
-${BROWSER} = Firefox
+#${BROWSER} = firefox
+
 *** Keywords ***
 Begin Web Test
     #Open Browser  about:blank  chrome
-    Open Browser  about:blank   ${BROWSER}
-    Maximize Browser Window
+     Open Browser  about:blank  firefox
+     Maximize Browser Window
 
 End Web Test
     Close Browser

@@ -7,7 +7,8 @@ Resource  ../Resources/Amazon.robot  # necessary for lower level keywords in tes
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
-
+*** Variables ***
+#${APPURL} = https://www.amazon.com
 
 
 
