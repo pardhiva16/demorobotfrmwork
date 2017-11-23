@@ -6,6 +6,7 @@ Resource  ../Resources/PO/Product.robot
 Resource  ../Resources/PO/Cart.robot
 Resource  ../Resources/PO/SignIn.robot
 
+
 *** Keywords ***
 Search for Products
     LandingPage.Load
